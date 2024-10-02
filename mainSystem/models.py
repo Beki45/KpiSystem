@@ -269,13 +269,13 @@ class TarbiyaTadbirlar(models.Model):
 # 10. Darstdan tashqari tadbirlar
 class DarstanTashqariTadbirlar(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
-    maqola = models.FileField(upload_to='darsdan_tashqari_files/',verbose_name="Darstdan tashqari madaniy va ma'rifiy tadbir")
+    maqola = models.FileField(upload_to='darsdan_tashqari_files/',verbose_name="Darsdan tashqari madaniy va ma'rifiy tadbir")
     score = models.DecimalField(null=True, blank=True, verbose_name="Baholash",max_digits=2,decimal_places=1)
     izoh = models.TextField()
 
     class Meta:
-        verbose_name = "Darstdan tashqari tadbir"
-        verbose_name_plural = "Darstdan tashqari tadbirlar"
+        verbose_name = "Darsdan tashqari tadbir"
+        verbose_name_plural = "Darsdan tashqari tadbirlar"
 
     def __str__(self):
         return f"{self.user.username} - Darstdan tashqari tadbir"
